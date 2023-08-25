@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <form action="helloServlet" method="post">
+            <p>Usuário</p>
+            <input type="text" name="username"/>
+            <p>Senha</p>
+            <input type="password" name="password"/>
+            <input type="submit"/>
+        </form>
+        
+        <p id="errorText" style="color: red;"></p>
+
+        <script>
+            if (window.location.hash === "#error") {
+                // Exibe a mensagem de erro
+                var errorText = document.getElementById("errorText");
+                errorText.textContent = "Senha incorreta";
+            }
+        </script>
+    </body>
+</html>
